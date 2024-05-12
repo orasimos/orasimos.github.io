@@ -5,7 +5,8 @@ body, html {
     height: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;        
     display: block;
-    background-image: url("/assets/img/honeycomb-background.avif");
+    background-image: url("/assets/img/honeycomb-background.avif");    
+    background-color: white;
     background-attachment: fixed;
 }
 
@@ -71,7 +72,8 @@ header nav {
 
 header nav ul {
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
+    align-items: center;
 }
 
 header nav ul li {
@@ -79,6 +81,25 @@ header nav ul li {
     width: 110px;
     display: block;
     text-align: center;    
+}
+
+.language-button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    appearance: none;    
+    background-color: inherit;
+}
+
+.language-button:active {
+    opacity: 0.6;
+}
+
+.language-button img {
+    margin: 0;
+    padding: 0;    
+    height: 40px;
 }
 
 header .ham-menu {
@@ -143,7 +164,7 @@ header .ham-menu-item:active {
 
 /* Main Page */
 .main-container {
-    /* background-color: rgba(255, 255, 255, 0.8); */
+    background-color: rgba(255, 255, 255, 0.8);
     min-height: 100%;
 }
 
@@ -154,6 +175,29 @@ header .ham-menu-item:active {
 
 .welcome-image-container img {
     width: 100%;
+}
+
+#welcome-text-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#welcome-text-container .welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+    padding: 0 2rem 0 2rem;
+}
+
+#welcome-text-container img {
+    height: 50px;
+    width: 50px;
 }
 
 @media (max-width: 768px) {
@@ -167,5 +211,14 @@ header .ham-menu-item:active {
 
     header .logo h4{
         display: none;
+    }
+
+    #welcome-text-container {
+        display: block;
+    }
+
+    #welcome-text-container .welcome {
+        width: 90%;
+        padding: 0;
     }
 }
