@@ -109,7 +109,7 @@ header #ham-menu-items {
     margin-top: 4px;
     top: 5rem;
     left: 0;
-    width: 99%;
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.8);;
     list-style-type: none;
     flex-direction: column;
