@@ -12,7 +12,7 @@ body, html {
 
 /* HEADER */
 header {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     color: #d4af37;
     padding: 10px 20px;
     text-align: right;
@@ -98,8 +98,12 @@ header nav ul li {
 
 .language-button img {
     margin: 0;
-    padding: 0;    
-    height: 40px;
+    padding: 0;
+    height: 34px;
+}
+
+.language-button img.l-gr {
+    display: none;
 }
 
 header .ham-menu {
@@ -131,7 +135,7 @@ header #ham-menu-items {
     top: 5rem;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);;
+    background-color: rgba(255, 255, 255, 0.9);;
     list-style-type: none;
     flex-direction: column;
     justify-content: flex-start;
@@ -198,6 +202,76 @@ header .ham-menu-item:active {
 #welcome-text-container img {
     height: 50px;
     width: 50px;
+}
+
+/* Products - Main Page */
+#products-scroll-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#honey-scroll {
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;    
+    overflow: auto;
+    padding: 2rem 2rem 2rem 0;
+    background-color: #EEF3F6;
+}
+
+#honey-scroll .product {
+    margin: 0 0 0 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 7px;    
+    box-shadow: 1px 1px 10px rgb(156, 156, 156);
+    transition: box-shadow 0.3s;
+}
+
+#honey-scroll .product:hover {
+    box-shadow: 5px 5px 10px rgb(156, 156, 156);
+    transition: box-shadow 0.3s;
+}
+
+#honey-scroll .product:active {
+    opacity: 0.8;
+}
+
+#honey-scroll .product-img {
+    width: 250px;
+    border-radius: 7px;
+}
+
+#honey-scroll .product-text {
+    margin-top: 1rem;
+}
+
+#honey-scroll .product-price {
+    font-size: 0.9rem;
+    color: #009400;
+}
+
+#products-scroll-container .honey-scroll-btn {
+    width: 150px;
+    height: 40px;
+    border: 2px solid #7D7277;
+    border-radius: 7px;
+    background-color: #EEF3F6;
+    margin: auto;
+    margin-top: 1rem;
+    box-shadow: 1px 1px 10px rgb(156, 156, 156);
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+}
+
+#products-scroll-container .honey-scroll-btn:hover {
+    box-shadow: 5px 5px 10px rgb(156, 156, 156);
+    transition: box-shadow 0.3s;
+}
+
+#products-scroll-container .honey-scroll-btn:active {
+    box-shadow: 5px 5px 15px rgb(156, 156, 156);
+    transform: translate(0, -1px);
 }
 
 @media (max-width: 768px) {
