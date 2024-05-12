@@ -12,7 +12,7 @@ body, html {
 
 /* HEADER */
 header {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     color: #d4af37;
     padding: 10px 20px;
     text-align: right;
@@ -51,15 +51,18 @@ header .nav-container {
 
 header .nav-item {
     text-decoration: none;
+    color: inherit;
     margin-left: 20px;    
     padding: 0.5rem;
     background-color: #ffeeb7;
-    border-radius: 5px;
+    border-radius: 7px;
     display: block;
 }
 
 header a:hover {
     background-color: #d4af37;
+    color: #ffeeb7;
+    box-shadow: 1px 1px 10px rgb(156, 156, 156);
 }
 
 header nav {
@@ -135,7 +138,7 @@ header #ham-menu-items {
     top: 5rem;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);;
+    background-color: rgba(255, 255, 255, 0.95);;
     list-style-type: none;
     flex-direction: column;
     justify-content: flex-start;
@@ -166,7 +169,6 @@ header .ham-menu-item:active {
 
 /* FOOTER */
 footer {
-    margin-top: 2rem;
     background-color: #3d3d3d;
     color: white;
     padding: 1rem 2rem 1rem 2rem;
@@ -231,8 +233,9 @@ footer .copyright {
 
 /* Main Page */
 .main-container {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     min-height: 100%;
+    padding-bottom: 2rem;
 }
 
 .welcome-image-container {
@@ -363,6 +366,7 @@ footer .copyright {
     border: none;    
     border-radius: 7px;
     background-color: #EEF3F6;
+    /* background-color: #ffeeb7; */
     margin: auto;
     box-shadow: 1px 1px 10px rgb(156, 156, 156);
     transition: box-shadow 0.3s;
@@ -397,13 +401,49 @@ footer .copyright {
 /* Contact-page */
 #contact-container {
     min-height: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-top: 2rem;
+}
+
+#contact-container .contact-form-container {
+    width: 300px;
+    background-color: #EEF3F6;
+    padding: 1rem;
+    border-radius: 7px;
+    box-shadow: 1px 1px 10px rgb(156, 156, 156);
+    margin: auto;
 }
 
 #contact-container .contact-form {
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
+}
+
+#contact-container .contact-form .input-text{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 7px;
+    padding: 0.5rem;
+    box-shadow: inset 0 0 5px rgb(156, 156, 156);
+}
+
+#contact-container .contact-form textarea {
+    resize: none;
+    height: 10rem;
+}
+
+#contact-container .contact-form .contact-form-btn {
+    width: 150px;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+#contact-container .contact-form .contact-form-btn:hover {
+    box-shadow: 1px 1px 5px rgb(156, 156, 156);
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 @media (max-width: 768px) {
