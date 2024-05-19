@@ -23,7 +23,6 @@
             $("#footer").load("shared/footer.html"); 
         });
     </script>
-    <script type="text/javascript" src="../translate.js"></script>    
 </head>
 <body>
     <header id="header"></header>
@@ -66,57 +65,21 @@
             </div>
         </div>
         <div id="products-scroll-container">
-            <div id="honey-scroll">
-                <div class="product">
-                    <img class="product-img" src="/assets/img/products/honey/thyme-honey.png" alt="">
-                    <h4 class="product-text" data-translate="thyme-honey">Thyme Honey</h4>
-                    <p class="product-price">&#8364;10.00/kg</p>
-                </div>
-                <div class="product">
-                    <img class="product-img" src="/assets/img/products/honey/blossom-honey.png" alt="">
-                    <h4 class="product-text" data-translate="blossom-honey">Blossom Honey</h4>
-                    <p class="product-price">&#8364;8.00/kg</p>
-                </div>
-                <div class="product">
-                    <img class="product-img" src="/assets/img/products/honey/carob-honey.png" alt="">
-                    <h4 class="product-text" data-translate="carob-honey">Carob Honey</h4>
-                    <p class="product-price">&#8364;10.00/kg</p>
-                </div>
-                <div class="product">
-                    <img class="product-img" src="/assets/img/products/honey/sage-honey.png" alt="">
-                    <h4 class="product-text" data-translate="sage-honey">Sage Honey</h4>
-                    <p class="product-price">&#8364;12.00/kg</p>
-                </div>                
+            <div id="honey-scroll" class="scroll">
+                <!-- Here go the honey products created by product.js -->               
             </div>            
-
-            <div id="pollen-scroll">
-                <div class="product">
-                    <img class="product-img" src="/assets/img/products/honey/thyme-honey.png" alt="">
-                    <h4 class="product-text" data-translate="thyme-honey">Thyme Honey</h4>
-                    <p class="product-price">&#8364;10.00/kg</p>
-                </div>
-                <div class="product">
-                    <img class="product-img" src="/assets/img/products/honey/blossom-honey.png" alt="">
-                    <h4 class="product-text" data-translate="blossom-honey">Blossom Honey</h4>
-                    <p class="product-price">&#8364;8.00/kg</p>
-                </div>
-                <div class="product">
-                    <img class="product-img" src="/assets/img/products/honey/carob-honey.png" alt="">
-                    <h4 class="product-text" data-translate="carob-honey">Carob Honey</h4>
-                    <p class="product-price">&#8364;10.00/kg</p>
-                </div>
-                <div class="product">
-                    <img class="product-img" src="/assets/img/products/honey/sage-honey.png" alt="">
-                    <h4 class="product-text" data-translate="sage-honey">Sage Honey</h4>
-                    <p class="product-price">&#8364;12.00/kg</p>
-                </div>  
+            <div id="other-scroll" class="scroll">
+                <!-- Here go the other products created by product.js -->
             </div>
-
+            <div id="non-edible-scroll" class="scroll">
+                <!-- Here go the non-edible products created by product.js -->
+            </div>
             <button class="products-btn">
                 <a href="products.html">All Products</a>
             </button>
         </div>
     </div>
     <footer id="footer"></footer>    
+    <script src="./products.js"></script>
 </body>
 </html>
