@@ -103,7 +103,7 @@ function createHoneyProduct(product) {
     if (product.type !== "honey") return;
 
     return `
-        <div class="product">
+        <div class="product" onclick="showProduct('${ product.name }')">
             <img class="product-img" src="${ product.img }" alt="">
             <h4 class="product-text" data-translate="thyme-honey">${ product.name }</h4>
             <p class="product-price">&#8364;${ product.price }/kg</p>
@@ -115,7 +115,7 @@ function createOtherProduct(product) {
     if (product.type !== "other") return;
 
     return `
-        <div class="product">
+        <div class="product" onclick="showProduct('${ product.name }')">
             <img class="product-img" src="${ product.img }" alt="">
             <h4 class="product-text" data-translate="thyme-honey">${ product.name }</h4>
             <p class="product-price">&#8364;${ product.price }/kg</p>
@@ -127,7 +127,7 @@ function createNonEdibleProduct(product){
     if (product.type !== "non-edible") return;
 
     return `
-        <div class="product">
+        <div class="product" onclick="showProduct('${ product.name }')">
             <img class="product-img" src="${ product.img }" alt="">
             <h4 class="product-text" data-translate="thyme-honey">${ product.name }</h4>
             <p class="product-price">&#8364;${ product.price }/kg</p>
@@ -147,3 +147,36 @@ function pushProducts() {
 }
 
 window.onload = pushProducts;
+
+function showProduct(name) {
+    const product = products.find(ps => ps.name === name);
+    if (!product) return;
+
+    const productContainer = document.getElementById('popup-container');
+    productContainer.innerHTML = `
+        <div id="product-popup" class="popup">
+            <div class="popup-container">
+                <div class="popup-content">
+                    <div class="close-btn-container">
+                        <span class="close-btn" onclick="closePopup()">&times;</span>
+                    </div>                                        
+                    <img src="${ product.img }" alt="">
+                    <div class="product-info">
+                        <h2>${ product.name }</h2>                
+                        <p>${ product.description }</p>
+                        <p><strong>Price:</strong> &#8364;${ product.price }</p>
+                    </div>                 
+                </div>
+            </div>            
+        </div>
+    `;
+
+    document.getElementById('product-popup').style.display = 'flex';
+}
+
+function closePopup() {
+    const popup = document.getElementById('product-popup');
+    popup.innerHTML = '';
+    popup.style.display = 'none';
+}
+
