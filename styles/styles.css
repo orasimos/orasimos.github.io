@@ -276,7 +276,7 @@ footer .copyright {
     flex-direction: column;
 }
 
-.scroll {
+#products-scroll-container .scroll {
     border-radius: 7px;
     display: flex;
     flex-direction: row;    
@@ -369,7 +369,7 @@ footer .copyright {
     background-color: rgba(255, 255, 255, 0.9);
     padding-top: 2rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
 }
 
@@ -379,7 +379,7 @@ footer .copyright {
     padding: 1rem;
     border-radius: 7px;
     box-shadow: 1px 1px 10px rgb(156, 156, 156);
-    margin: auto;
+    margin: 0 auto;
 }
 
 #contact-container .contact-form {
@@ -401,33 +401,15 @@ footer .copyright {
     height: 10rem;
 }
 
-#contact-container .contact-form .contact-form-btn {
-    width: 150px;
-    height: 40px;
-    border-radius: 7px;
-    border: none;
-    cursor: pointer;
-}
-
-#contact-container .contact-form .contact-form-btn:hover {
-    box-shadow: 1px 1px 5px rgb(156, 156, 156);
-    transition: box-shadow 0.2s ease-in-out;
-}
-
 #contact-container .map-container {
-    width: 500px;
-    height: 500px;
-    margin: auto;    
+    width: 100%;
+    height: 700px;
 }
 
-#contact-container .map-container iframe {
-    width: 100%;
-    height: 100%;
-}
 
 /* Map */
 #map {
-    height: 400px;
+    height: 100%;
     width: 100%;
 }
 .custom-marker {
@@ -506,6 +488,66 @@ footer .copyright {
 .close-btn {
     cursor: pointer;
     font-size: 24px;
+}
+
+/* Products Page */
+#products-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    min-height: 100%;
+    padding: 2rem 0 2rem 0;
+}
+
+#products-container .product-type-container {
+    background-color: #EEF3F6;
+    margin: 2rem;
+    border-radius: 7px;
+    padding: 2rem;
+}
+
+#products-container .scroll {
+    border-radius: 7px;
+    display: flex;    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem 2rem 2rem 0;    
+}
+
+#products-container .scroll .product {
+    margin-bottom: 2rem;
+}
+
+/* About Us */
+
+#about-us {
+    background-color: rgba(255, 255, 255, 0.9);
+    min-height: 100%;
+    padding: 2rem 0 2rem 0;
+}
+
+.content {
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1, h2, h3 {
+    color: #333;
+}
+
+.family-photos, .product-photos {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.family-photos img, .product-photos img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
