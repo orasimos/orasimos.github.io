@@ -370,7 +370,7 @@ footer .copyright {
     padding-top: 2rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 #contact-container .contact-form-container {
@@ -423,6 +423,32 @@ footer .copyright {
 #contact-container .map-container iframe {
     width: 100%;
     height: 100%;
+}
+
+/* Map */
+#map {
+    height: 400px;
+    width: 100%;
+}
+.custom-marker {
+    width: 20px;
+    height: 20px;
+    background-color: #d4af37;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* Popup */
