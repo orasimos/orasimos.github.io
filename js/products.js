@@ -4,7 +4,7 @@ products = [
         img: "/assets/img/products/honey/thyme-honey.png",
         price: "10.00",
         type: "honey",
-        description: "Product only in the summer months when thyme blossoms. It's aromatic taste and golden color are it's most prominent characteristics. In Greece it is considered a luxury item "
+        description: "Product only in the summer months when thyme blossoms. It's aromatic taste and golden color are it's most prominent characteristics. In Greece it is considered a luxury item."
     },
     {
         name: "Blossom Honey",
