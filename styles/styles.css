@@ -13,7 +13,7 @@ body, html {
 /* HEADER */
 header {
     background-color: rgba(255, 255, 255, 0.95);
-    color: #d4af37;
+    color: #a0842a;
     padding: 10px 20px;
     text-align: right;
     position: sticky;
@@ -36,6 +36,8 @@ header .logo a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 0 1rem;
+    border-radius: 7px;
 }
 
 header .logo a img {
@@ -63,7 +65,7 @@ header .nav-item {
 }
 
 header a:hover {
-    background-color: #d4af37;
+    background-color: #a0842a;
     color: #ffeeb7;
     box-shadow: 1px 1px 10px rgb(156, 156, 156);
 }
@@ -131,7 +133,7 @@ header .icon {
 }
 
 header .ham-menu:hover {
-    background-color: #d4af37;
+    background-color: #a0842a;
 }
 
 header #ham-menu-items {
@@ -166,7 +168,7 @@ header .ham-menu-item:hover {
 }
 
 header .ham-menu-item:active {
-    background-color: #d4af37;
+    background-color: #a0842a;
 }
 
 /* FOOTER */
@@ -262,9 +264,15 @@ footer .copyright {
 
 .welcome-text {
     margin: auto;
-    margin-top: 100px;
-    font-size: 3rem;
-    min-height: 100%;
+    margin-top: 400px;
+    font-size: 4rem;
+    min-height: 5.5rem;
+    color: #EEF3F6;
+    font-family: "Salsa", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: -10px 0px 70px 90px rgba(0, 0, 0, 0.6);
 }
 
 .welcome-image {
@@ -322,6 +330,7 @@ footer .copyright {
 .scroll .product:hover {
     box-shadow: 5px 5px 10px rgb(156, 156, 156);
     transition: box-shadow 0.3s;
+    cursor: pointer;
 }
 
 .scroll .product:active {
@@ -380,6 +389,7 @@ footer .copyright {
 .btn:hover {
     box-shadow: 5px 5px 10px rgb(156, 156, 156);
     transition: box-shadow 0.3s;
+
 }
 
 .btn:active {
@@ -504,6 +514,11 @@ footer .copyright {
     padding: 0 1.5rem 0 1.5rem;
 }
 
+.product-info h2, p {
+    margin-block-start: 0.5rem;
+    margin-block-end: 0.5rem;
+}
+
 .close-btn-container {
     width: auto;
     display: flex;
@@ -567,6 +582,7 @@ footer .copyright {
     width: 100%;
     align-items: center;
     text-align: center;
+    margin-top: 4rem;
 }
 
 /* About Us */
@@ -580,27 +596,46 @@ footer .copyright {
 .content {
     max-width: 80%;
     margin: auto;
-    padding: 1rem;
+    padding-top: 2rem;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .content h1, h2, h3 {
     color: #333;
 }
 
-.content div {
+.about-card  {    
     display: flex;
-    flex-direction: row;
-    max-width: 600px;
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 2rem;
+    border-radius: 7px;
+    background-color: #EEF3F6;
+    box-shadow: 1px 1px 10px rgb(156, 156, 156);}
+
+.about-card h3 {
+    text-align: center;
 }
 
-.about-img {
-    width: 100%;
+.about-text {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-img {    
     max-width: 200px;
+    height: 200px;
     border-radius: 7px;
     margin: 1rem;
+}
+
+.about-p {
+    padding: 1rem;
 }
 
 /* Shared for all pages */
@@ -619,6 +654,10 @@ footer .copyright {
 
     header .logo h4 {
         display: none;
+    }
+
+    header .logo a{
+        padding: 0.5rem;        
     }
 
     .footer-container{
@@ -657,12 +696,11 @@ footer .copyright {
     }
 
     .product-type-content {
-        flex-direction: column;        
+        flex-direction: column;
     }
 
-    .product-type-text {        
-        margin: 0.5rem;
-        text-align: center;
+    .product-type-text {
+        margin: auto;
     }
 
     .product-type-img {
@@ -679,13 +717,31 @@ footer .copyright {
         flex-direction: column;
     }
 
+    .content {
+        max-width: 100%;
+        background: none;
+        box-shadow: none;
+    }
+
     .about-img {
         margin: auto;        
+    }
+
+    .welcome-text {
+        margin-top: 125px;
+        font-size: 3rem;
     }
 }
 
 @media (max-width: 431px) {
     .popup-container {
         width: 90%;
+    }    
+}
+
+@media (max-width: 375px) {
+    .popup-content img {
+        width: auto;
+        height: 200px;
     }
 }
